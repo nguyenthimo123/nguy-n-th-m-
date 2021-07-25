@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+ class Checkout {
+    public static void main(String[] args) {
+        //a.Sau khi apply, discount code trên trang checkout tự động viết hoa.
+        // Hãy dùng hàm thích hợp để verify discount code ở trang dashboard và discount code trên trang checkout match với nhau
+        String discode ="testing";
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap vao discount code: ");
+        String code= sc.nextLine();
+        String app=code.toUpperCase();
+        if(code.equalsIgnoreCase(discode) && app.equals("TESTING")){
+            System.out.println("a = True");
+        }else{
+            System.out.println("a = False");
+        }
+       //b. Sau khi nhập discount code trên trang checkout thì số tiền được trừ là “-$5.00”.
+        // Dùng CÁC hàm thích hợp để verify số tiền được trừ ở trang checkout đúng bằng discount value đã setting
+        int sub=10;
+        int discount=5;
+        double ship=4.99;
+        if(code.equals(discode) && (sub-discount+ship)==9.99){
+            System.out.println("b = True");
+        }else{
+            System.out.println("b = False");
+        }
+
+    }
+
+
+}
