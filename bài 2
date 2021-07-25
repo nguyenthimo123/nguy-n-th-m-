@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class AddProduct {
+    public static void main(String[] args) {
+
+        HashMap<String, List<String>> AddProduct = new HashMap<>();
+
+        //a. Buyer click thêm 3 product vào giỏ hàng
+        ArrayList<String> list1 = new ArrayList<>();
+            list1.add("Prices: $9.9");
+            list1.add("Variant: Pink");
+            list1.add("Quantity: 1");
+        AddProduct.put("Coat",list1);
+        ArrayList<String> list2 = new ArrayList<>();
+            list2.add("Prices: $14.5");
+            list2.add("Variant: White");
+            list2.add("Quantity: 1");
+        AddProduct.put("Jean", list2);
+        ArrayList<String> list3 = new ArrayList<>();
+            list3.add("Prices: $15.0");
+            list3.add("Variant: Red");
+            list3.add("Quantity: 1");
+        AddProduct.put("T-Shirt", list3);
+
+        //b. Buyer giảm số lượng của product trên trong giỏ hàng còn 2
+        AddProduct.remove("T-Shirt");
+
+        //c. Buyer tiếp tục thêm mới 1 product khác:
+        ArrayList<String> list4 = new ArrayList<>();
+        list4.add("Prices: $10");
+        list4.add("Quantity: 1");
+        AddProduct.put("Shirt", list4);
+
+        //d. In ra màn hình tất cả các product có trong giỏ hàng
+        for(String i: AddProduct.keySet()){
+            System.out.println("Product: " + i + " " + AddProduct.get(i));
+        }
+    }
+}
