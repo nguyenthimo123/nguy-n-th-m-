@@ -1,0 +1,25 @@
+public class songuyen {
+    public static void main(String[] args) {
+        int n = 50;
+        System.out.println("Các số nguyên tố nhỏ hơn n là: ");
+        for (int i = 0; i < n; i++) {
+            if (songuyen(i)) {
+                System.out.print(i + ",");
+            }
+        }
+    }
+    public static boolean songuyen(int n) {
+        // n < 2 thì n khong phai la so nguyen to
+        if (n < 2) {
+            return false;
+        }
+        // Khi n >= 2
+        int squareRoot = (int) Math.sqrt(n);
+        for (int i = 2; i <= squareRoot; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
