@@ -1,0 +1,12 @@
+public class timso{
+    public static void main(String[] args) {
+        System.out.println("Các số chia hết cho 7 mà không chia hết cho 5 là: ");
+        for (int i = 10 ; i <= 200; i++) {
+            boolean b = i % 5 == 0;
+            // nếu i không chia hết cho 7 thì quay lại vòng lặp for
+            if((i % 7 == 0 ) && ( i % 5 != 0))
+            System.out.print(i+",");
+        }
+    }
+
+}
